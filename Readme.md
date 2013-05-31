@@ -23,12 +23,12 @@ for the specific brand:
 ### Design
 
 * Within the `public/images/meta` folder:
-** The `apple-touch-icon-precomposed-XxX.png` files need to be changed
-** The `favicon.ico` file need to be changed
+  * The `apple-touch-icon-precomposed-XxX.png` files need to be changed
+  * The `favicon.ico` file need to be changed
 * If custom fonts are being used:
-** Fonts need to be added to the `public/fonts` folder
-** `@font-face` for each font needs to be added to `public/css/fonts.styl`
-** The font faces need to be added to the `TYPOGRAPHY` section in `public/css/settings.styl`
+  * Fonts need to be added to the `public/fonts` folder
+  * `@font-face` for each font needs to be added to `public/css/fonts.styl`
+  * The font faces need to be added to the `TYPOGRAPHY` section in `public/css/settings.styl`
 * Error page image needs to be changed: `public/images/error/logo-error.png`
 
 ### Tech
@@ -37,7 +37,7 @@ for the specific brand:
 * Routes need to be set up for static pages
 * Port needs to be updated to correct port for project
 * Update the `properties.js` file in the root of the project for all environments:
-** Google Analytics IDs
-** Port number
-** URLs
-** Domains
+  * Google Analytics IDs
+  * Port number
+  * URLs
+  * Domains
