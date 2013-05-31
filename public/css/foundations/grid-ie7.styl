@@ -1,0 +1,115 @@
+width-ie(factor)
+  width unquote('expression((this.parentNode.clientWidth * '+(factor / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"])) + "px")')
+
+gridWidthsIE($namespace="")
+  // Whole
+  .{$namespace}one-whole
+    width-ie(100)
+
+  // Halves
+  .{$namespace}one-half
+    width-ie(50)
+
+
+  // Thirds
+  .{$namespace}one-third
+    width-ie(100 / 3)
+  .{$namespace}two-thirds
+    width-ie(2 * (100 / 3))
+
+
+  // Quarters
+  .{$namespace}one-quarter
+    width-ie(100 / 4)
+  .{$namespace}two-quarters
+    @extend .{$namespace}one-half
+  .{$namespace}three-quarters
+    width-ie(3 * (100 / 4))
+
+
+  // Fifths
+  .{$namespace}one-fifth
+    width-ie(100 / 5)
+  .{$namespace}two-fifths
+    width-ie(2 * (100 / 5))
+  .{$namespace}three-fifths
+    width-ie(3 * (100 / 5))
+  .{$namespace}four-fifths
+    width-ie(4 * (100 / 5))
+
+
+  // Sixths
+  .{$namespace}one-sixth
+    width-ie(100 / 6)
+  .{$namespace}two-sixths
+    @extend .{$namespace}one-third
+  .{$namespace}three-sixths
+    @extend .{$namespace}one-half
+  .{$namespace}four-sixths
+    @extend .{$namespace}two-thirds
+  .{$namespace}five-sixths
+    width-ie(5 * (100 / 6))
+
+
+  // Eighths
+
+  .{$namespace}one-eighth
+    width-ie(100 / 8)
+  .{$namespace}two-eighths
+    @extend .{$namespace}one-quarter
+  .{$namespace}three-eighths
+    width-ie(3 * (100 / 8))
+  .{$namespace}four-eighths
+    @extend .{$namespace}one-half
+  .{$namespace}five-eighths
+    width-ie(5 * (100 / 8))
+  .{$namespace}six-eighths
+    @extend .{$namespace}three-quarters
+  .{$namespace}seven-eighths
+    width-ie(7 * (100 / 8))
+
+
+  // Tenths
+  .{$namespace}one-tenth
+    width-ie(100 / 10)
+  .{$namespace}two-tenths
+    @extend .{$namespace}one-fifth
+  .{$namespace}three-tenths
+    width-ie(3 * (100 / 10))
+  .{$namespace}four-tenths
+    @extend .{$namespace}two-fifths
+  .{$namespace}five-tenths
+    @extend .{$namespace}one-half
+  .{$namespace}six-tenths
+    @extend .{$namespace}three-fifths
+  .{$namespace}seven-tenths
+    width-ie(7 * (100 / 10))
+  .{$namespace}eight-tenths
+    @extend .{$namespace}four-fifths
+  .{$namespace}nine-tenths
+    width-ie(9 * (100 / 10))
+
+
+  // Twelfths
+  .{$namespace}one-twelfth
+    width-ie(100 / 12)
+  .{$namespace}two-twelfths
+    @extend .{$namespace}one-sixth
+  .{$namespace}three-twelfths
+    @extend .{$namespace}one-quarter
+  .{$namespace}four-twelfths
+    @extend .{$namespace}one-third
+  .{$namespace}five-twelfths
+    width-ie(5 * (100 / 12))
+  .{$namespace}six-twelfths
+    @extend .{$namespace}one-half
+  .{$namespace}seven-twelfths
+    width-ie(7 * (100 / 12))
+  .{$namespace}eight-twelfths
+    @extend .{$namespace}two-thirds
+  .{$namespace}nine-twelfths
+    @extend .{$namespace}three-quarters
+  .{$namespace}ten-twelfths
+    @extend .{$namespace}five-sixths
+  .{$namespace}eleven-twelfths
+    width-ie(11 * (100 / 12))

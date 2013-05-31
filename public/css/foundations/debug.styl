@@ -1,0 +1,23 @@
+body:after
+  content 'Small breakpoint'
+  position fixed
+  bottom 15px
+  right 0px
+  background-color #fff
+  color #aaa
+  border 1px solid #ddd
+  padding 5px 5px
+  font-size 15px
+  line-height 15px
+
+@media $lapMq
+  body:after
+    content 'Middle breakpoint'
+
+@media $deskMq
+  body:after
+    content 'Large breakpoint'
+
+@media $deskSuperWideMq
+  body:after
+    content 'Very large breakpoint'

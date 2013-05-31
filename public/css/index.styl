@@ -1,0 +1,40 @@
+//
+// INDEX STYLESHEET
+// ================
+// All Stylus imports should live in here.
+//
+
+
+//
+// SETUP
+//
+
+@import 'nib'
+@import 'settings' // Review all variable implementations
+@import 'fonts'
+
+//
+// FOUNDATIONS
+// Base HTML and generic site-wide elements
+//
+
+@import 'foundations/mixins'
+@import 'foundations/base'
+@import 'foundations/typography'
+@import 'foundations/grid'
+@import 'foundations/structure'
+
+//
+// EXTRAS
+//
+
+@import 'print'
+// @import 'sandbox'
+
+
+//
+// DEBUG MODE
+//
+
+if $debugMode
+  @import 'foundations/debug'

@@ -1,0 +1,212 @@
+//
+// TYPOGRAPHIC STYLES
+// ==================
+//
+
+//
+// SELECTED TEXT
+//
+
+::-moz-selection
+  color #fff
+  background #6c4a4b
+  text-shadow none
+::selection
+  color #fff
+  background darken($colorPrimary, 70%)
+  text-shadow none
+
+
+//
+// BASE STYLES
+//
+
+body
+  font-family $baseFontFamily
+  font-size $baseFontSize
+  line-height $baseLineHeight
+  font-weight 300
+  color $baseFontColor
+
+
+.text-secondary
+  font-size .8em
+  line-height 1.25em
+  letter-spacing 0.2em
+  color $colorSecondary
+  font-weight 400
+  text-transform uppercase
+
+
+//
+// HEADINGS
+// Uses a Double-stranded heading hierarchy to preserve the document outline.
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  font-family $headingFontFamily
+  font-weight 400
+  line-height 1.133em
+  //text-rendering optimizeLegibility
+  color $baseFontColor
+  margin-bottom 0.5em
+  text-transform uppercase
+  letter-spacing .05em
+  -webkit-font-smoothing antialiased
+
+
+// Use mixins to be able to switch font sizes in different screen sizes
+// as extend does not work inside media queries
+h1()
+  font-size 2.33em
+  line-height 1.06em
+h2()
+  font-size 2em
+  line-height 1.067em
+h3()
+  font-size 1.67em
+  line-height 1.08em
+h4()
+  font-size 1.467em
+h5()
+  font-size 1.3em
+h6()
+  font-size 1em
+
+h1, .h1
+  h1()
+h2, .h2
+  h2()
+h3, .h3
+  h3()
+h4, .h4
+  h4()
+h5, .h5
+  h5()
+h6, .h6
+  h6()
+
+
+// h1, .h1
+//   @media $palmMq
+//     font-size 2.1em
+
+//
+// LINKS
+//
+
+a
+  color $baseFontColor
+  text-decoration none
+
+  &:focus,
+  &:hover
+    color $colorPrimary
+
+  &:active
+    color $colorPrimary
+
+.inline
+  border-bottom 1px dotted $baseFontColor
+  &:focus,
+  &:hover
+    border-color $colorPrimary
+    text-decoration none
+
+.secondary
+  color $colorSecondary
+  border-color $colorSecondary
+
+p a
+  @extend .inline
+
+//
+// EMPHASIS
+//
+
+blockquote, q, em, cite, dfn, i, cite, var
+  font-style italic
+
+th, strong, dt, b
+  font-weight bold
+
+
+//
+// FORMS
+//
+
+legend
+  padding-bottom .5em
+
+input, select, textarea
+  font-size 1em
+
+
+//
+// QUOTES
+//
+
+blockquote p:before, blockquote p:after, q:before, q:after
+  content ''
+
+blockquote
+  font-size 1.125em
+
+blockquote
+  p
+    margin-bottom 0
+
+
+//
+// TEXT MARKING
+//
+
+ins
+  text-decoration none
+  border-bottom 3px double #333
+
+del
+  text-decoration line-through
+
+mark
+  background-color #dee154
+  color #222
+  font-weight bold
+
+
+//
+// PRE-FORMATTED TEXT / CODE BLOCKS
+//
+
+pre
+code
+  font-family 'Menlo', 'Monaco', monospace
+  color #444
+
+
+//
+// MISC PRESONTATIONAL ELEMENTS
+//
+
+abbr
+  border-bottom 1px dotted #333
+  font-variant normal
+
+small
+  font-size 0.8em
+
+sub,
+sup
+  position relative
+  font-size 75%
+  line-height 0
+  vertical-align baseline
+
+sup
+  top -0.5em
+
+sub
+  bottom -0.25em
+

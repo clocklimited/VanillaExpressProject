@@ -1,0 +1,27 @@
+!!! 5
+html.js(lang='en')
+  head
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
+
+    title 500 Internal Server Error / SITENAME
+
+    link(rel='stylesheet', href=versionPath('/static/css/error.css'))
+    link(rel='shortcut icon', href=versionPath('/static/images/meta/favicon.ico'))
+
+  body
+
+    .centering
+
+      h1: img(src=versionPath('/static/images/error/logo-error.png'), alt='SITENAME')
+
+      h2 500 Internal Server Error
+
+      p
+        | An Internal Server Error means there is a problem with the website’s server.
+        |  It is not a problem with your computer or internet connection.
+
+      p We are working to fix the problem – please try again later.
+
+      P We apologize for any inconvience.

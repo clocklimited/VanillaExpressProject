@@ -1,0 +1,117 @@
+//
+// BASE STYLES
+// ===========
+// Typographic styles should live in typography.styl
+// Form and Table styles live in their respective stylesheets
+//
+
+
+//
+// SPACING
+// Unset margins and padding, the reset for specific elements
+//
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display block // Display in IE
+  margin 0
+  padding 0
+
+html, body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td
+  margin 0
+  padding 0
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom 1em
+
+p, pre, ul, ol, dd, hr, legend, button, address, table, blockquote
+  margin-bottom $baseMarginBottom
+
+// Remove spacing from buttons in Firefox
+input[type="reset"]::-moz-focus-inner
+input[type="button"]::-moz-focus-inner
+input[type="submit"]::-moz-focus-inner
+button::-moz-focus-inner
+  padding 0
+  margin 0
+
+
+//
+// BASIC ELEMENTS
+//
+
+html
+body
+  height 100%
+
+body
+  background $baseBackgroundColor
+
+
+//
+// LISTS
+//
+
+li
+  list-style-position inside
+
+  ul &
+    list-style-type disc
+
+  ol &
+    list-style-type decimal
+
+// Unstyle navigation lists
+nav
+  ul, ol
+    margin-bottom 0
+  li
+    list-style none
+
+  dd
+    margin-top .5em
+
+
+//
+// FORMS
+//
+
+fieldset
+  border none
+
+
+//
+// MEDIA
+//
+
+img
+  border 0
+
+img, object
+  vertical-align bottom
+
+
+//
+// PRE-FORMATTED TEXT / CODE BLOCKS
+//
+
+pre
+  code
+    display block
+    padding 20px
+    border 1px solid #ccc
+    background-color #fff
+
+
+//
+// MISC
+//
+
+hr
+  display block
+  height 1px
+  width 100%
+  border 0
+  background-color #ccc
+
+address
+  font-style normal

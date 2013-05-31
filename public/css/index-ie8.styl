@@ -1,0 +1,41 @@
+@import 'settings'
+@import 'foundations/grid'
+@import 'foundations/typography'
+@import 'foundations/mixins'
+
+.icon-ie
+  display block
+  background-image versionPath('/static/images/sprite-ie.png')
+
+body
+  min-width $deskStart
+
+gridWidths("desk-")
+
+.grid-main
+  > .desk-one-third
+    padding-left $gutter + 20px
+
+// Structure
+
+.grid-main .grid__item.desk-one-whole
+  .table
+    display table
+  .row
+    display table-row
+  .cell
+    float none
+    display table-cell
+    vertical-align top
+    height 100%
+
+.grid-main .grid__item.desk-two-thirds
+  .table
+    display block
+  .row
+    height 100%
+  .cell
+    height 100%
+
+.story > a *
+  cursor pointer

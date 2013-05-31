@@ -1,0 +1,180 @@
+@import "nib"
+
+
+// Nice Grid!
+// Based on csswizardry-grids by Harry Roberts:
+// https://github.com/csswizardry/csswizardry-grids
+
+
+//
+// Settings
+//
+
+// Grid setup
+
+.grid
+  clear both
+  clearfix()
+  margin-left - $gutter
+
+.grid__item
+  display inline
+  float left
+  padding-left $gutter
+  box-sizing border-box
+  min-height 1px // Empty grid items shouldn't collapse
+
+.grid__item-alt
+  @extend .grid__item
+  float right
+
+//
+// Create widths, prefixed by the specified namespace
+//
+gridWidths($namespace="")
+
+  // Visibility
+  .{$namespace}visible
+    display block !important
+  .{$namespace}hidden
+    display none !important
+
+  // Whole
+  .{$namespace}one-whole
+    width 100%
+
+
+  // Halves
+  .{$namespace}one-half
+    width 50%
+
+
+  // Thirds
+  .{$namespace}one-third
+    width (100% / 3)
+  .{$namespace}two-thirds
+    width 2 * (100% / 3)
+
+
+  // Quarters
+  .{$namespace}one-quarter
+    width (100% / 4)
+  .{$namespace}two-quarters
+    @extend .{$namespace}one-half
+  .{$namespace}three-quarters
+    width 3 * (100% / 4)
+
+
+  // Fifths
+  .{$namespace}one-fifth
+    width (100% / 5)
+  .{$namespace}two-fifths
+    width 2 * (100% / 5)
+  .{$namespace}three-fifths
+    width 3 * (100% / 5)
+  .{$namespace}four-fifths
+    width 4 * (100% / 5)
+
+
+  // Sixths
+  .{$namespace}one-sixth
+    width (100% / 6)
+  .{$namespace}two-sixths
+    @extend .{$namespace}one-third
+  .{$namespace}three-sixths
+    @extend .{$namespace}one-half
+  .{$namespace}four-sixths
+    @extend .{$namespace}two-thirds
+  .{$namespace}five-sixths
+    width 5 * (100% / 6)
+
+
+  // Eighths
+
+  .{$namespace}one-eighth
+    width (100% / 8)
+  .{$namespace}two-eighths
+    @extend .{$namespace}one-quarter
+  .{$namespace}three-eighths
+    width 3 * (100% / 8)
+  .{$namespace}four-eighths
+    @extend .{$namespace}one-half
+  .{$namespace}five-eighths
+    width 5 * (100% / 8)
+  .{$namespace}six-eighths
+    @extend .{$namespace}three-quarters
+  .{$namespace}seven-eighths
+    width 7 * (100% / 8)
+
+
+  // Tenths
+  .{$namespace}one-tenth
+    width (100% / 10)
+  .{$namespace}two-tenths
+    @extend .{$namespace}one-fifth
+  .{$namespace}three-tenths
+    width 3 * (100% / 10)
+  .{$namespace}four-tenths
+    @extend .{$namespace}two-fifths
+  .{$namespace}five-tenths
+    @extend .{$namespace}one-half
+  .{$namespace}six-tenths
+    @extend .{$namespace}three-fifths
+  .{$namespace}seven-tenths
+    width 7 * (100% / 10)
+  .{$namespace}eight-tenths
+    @extend .{$namespace}four-fifths
+  .{$namespace}nine-tenths
+    width 9 * (100% / 10)
+
+
+  // Twelfths
+  .{$namespace}one-twelfth
+    width (100% / 12)
+  .{$namespace}two-twelfths
+    @extend .{$namespace}one-sixth
+  .{$namespace}three-twelfths
+    @extend .{$namespace}one-quarter
+  .{$namespace}four-twelfths
+    @extend .{$namespace}one-third
+  .{$namespace}five-twelfths
+    width 5 * (100% / 12)
+  .{$namespace}six-twelfths
+    @extend .{$namespace}one-half
+  .{$namespace}seven-twelfths
+    width 7 * (100% / 12)
+  .{$namespace}eight-twelfths
+    @extend .{$namespace}two-thirds
+  .{$namespace}nine-twelfths
+    @extend .{$namespace}three-quarters
+  .{$namespace}ten-twelfths
+    @extend .{$namespace}five-sixths
+  .{$namespace}eleven-twelfths
+    width 11 * (100% / 12)
+
+//
+// Grid adjustment
+//
+
+@media $deskMq
+  .grid-main
+    > .desk-one-third:last-child
+      padding-left $gutter + 20px
+
+//
+// Breakpoint specific widths
+//
+
+gridWidths()
+
+@media $palmMq
+  gridWidths("palm-")
+
+@media $lapMq
+  gridWidths("lap-")
+
+@media $portableMq
+  gridWidths("portable-")
+
+@media $deskMq
+  gridWidths("desk-")

@@ -1,0 +1,186 @@
+@import('foundations/grid-ie7')
+
+gridWidthsIE("desk-")
+
+// Structure
+.grid-main > .grid__item.desk-one-whole
+.grid-main > .grid__item.desk-two-thirds
+  .table
+    display block
+  .row
+    display block
+    height 100%
+  .cell
+    display inline
+    height 100%
+    float left
+
+// Splash
+.widget-splash .thumbs
+  width-ie(19.9)
+
+// Feature and Galleries
+.grid-main > .grid__item.desk-one-third
+  .widget-feature
+  .widget-shoots
+    .desk-one-quarter
+      width-ie(50)
+  .widget-feature
+    .story-secondary
+      .bd
+        height 135px
+
+.grid-main > .grid__item.desk-one-whole
+  .widget-feature
+    .row
+      margin 0
+.grid-main > .grid__item.desk-two-thirds
+  .widget-shoots
+    .table
+      height 461px
+
+.widget-shoots
+  .story-hover .bd
+    width-ie(100)
+
+// Articles
+.article
+  .footer .share ul li
+  .footer .share ul li.social
+    display inline
+
+.article-header
+  margin-bottom 30px
+
+.article-img-primary
+  width-ie(58)
+
+.articles-nav
+  margin-left 0
+  .btn
+    display block
+    .title
+      display block
+
+// Tabbed list
+.widget-tabbed-list
+  ul li
+    list-style-position outside
+  .one-half
+    width-ie(50)
+
+
+.grid-main > .desk-one-whole
+.grid-main > .desk-two-thirds
+  .widget-breakingnews .desk-one-whole
+    width-ie(50)
+
+.widget-breakingnews
+  position relative
+
+// Footer
+
+.main-footer
+  ul.links.links-inline
+    li
+      display inline
+  .icons a
+    display inline
+  ul.links li
+    list-style-position outside
+
+// Gallery
+
+.gallery-header h1
+  img
+  a
+    display block
+    width 184px
+    height 22px
+
+.gallery-thumbreel
+  text-align left
+
+.gallery-social
+  .grid__item.one-third
+    width-ie(100 / 3)
+  .grid__item.two-thirds
+    width-ie(2 * (100 / 3))
+
+.gallery-structure__header
+  .gallery-header
+    .btn-back
+      color #fff
+      line-height 37px
+      .close
+        vertical-align middle
+
+.gallery-controllbar
+  .gallery-controlbar__item .icon
+    margin 0
+
+// Grid
+
+.widget-grid
+.widget-list
+  .list-item
+    width-ie(100)
+
+.desk-one-whole
+  > .widget-grid .grid__item.mod
+    width-ie(100 / 3)
+  > .widget-grid-portrait .grid__item.mod
+    width-ie(100 / 6)
+
+  > .widget-list .list-item
+    width 960px
+  > .widget-grid .list-item
+    width 300px
+  > .widget-grid-portrait .list-item
+    width 135px
+
+.desk-two-thirds
+  .widget-list .list-item
+    width 630px
+  .widget-grid .list-item
+    width 300px
+  .widget-grid-portrait .list-item
+    width 135px
+
+.desk-one-third
+  > .widget-list .list-item
+  > .widget-grid .list-item
+    width 280px
+  > .widget-grid .grid__item.mod
+    width-ie(100)
+  > .widget-grid-portrait .grid__item.mod
+    width-ie(100 / 2)
+  > .widget-grid-portrait .list-item
+    width 125px
+  > .widget-grid
+  > .widget-list
+    .grid-list-filters .grid__item
+      width-ie(100)
+
+.img-badge
+  overflow hidden
+  text-align center
+  span
+    position relative
+    top 20px
+
+// Sign In / Up
+.widget-signup
+  label
+    width 100%
+    display block
+  .grid__item.sign-up
+    width 304px
+  .input-field
+    display block
+    width-ie(100)
+
+.widget-profile
+  .input-field
+    display block
+    width 518px

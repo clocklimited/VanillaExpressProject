@@ -1,0 +1,126 @@
+//
+// SETTINGS
+// ========
+// Project specific setings which can be changed to modify the basic look and
+// feel of the project with little effort.
+//
+
+
+//
+// ENABLE DEBUG STYLING
+// Options are
+// * error: Only critical bugs are shown
+// * warning: Show error and warning bugs
+// * all: Show error and warning bugs, as well as general tips / minor bugs
+//
+
+$debugMode = false
+$debugLevel = 'all'
+
+
+//
+// LAYOUT
+//
+
+$baseMarginBottom = 1.5em
+$maxWidth = 980px
+
+
+//
+// TYPOGRAPHY
+//
+
+$headingFontFamily = Georgia, Times, serif
+$navigationFontFamily = $headingFontFamily
+
+$baseFontFamily = Arial, sans-serif
+$baseFontSize = 93.75%
+$baseLineHeight = 1.6em
+$baseFontColor = #000
+$baseBackgroundColor = #ffffff
+$baseMarginBottom = 1.4em
+
+
+//
+// COLOURS
+//
+
+// Brand Colours
+$colorPrimary = #ec1c23
+$colorSecondary = #a8a89d
+$colorSecondaryDark = #808074
+$colorSecondaryLight = #d2d2ca
+$colorSecondaryLighter = #e6e6df
+
+// Gallery
+$galleryControlPrimary = #868686
+
+// Base Button / Notification Colours
+$colorBase = #bbb
+$colorBorder = #ccc
+
+// Notification Colours
+$colorSuccess = #47a967
+$colorNotice = #4791a9
+$colorWarning = #dc7f2a
+$colorError = #ca4427
+
+
+//
+// FORM SPECIFIC
+//
+
+$textInputPadding = 5px
+$inputBackgroundColor = #FFFFFF // Remove?
+
+
+//
+// GLOBAL VISUAL ELEMENTS
+//
+
+$baseBorderRadius = 0 // Set to 0 to disable
+$baseBoxShadow = 0px 1px 4px rgba(69, 85, 93, 0.4) // Set to none to disable
+
+
+//
+// ANIMATIONS AND TRANSITIONS
+//
+
+$baseTransitionDuration = 0.2s // Set to 0s to disable transitions // Remove?
+$baseTransitionEasing = ease // Remove?
+$easeOutBack = cubic-bezier(0.680, -0.550, 0.265, 1.550)
+$easeOutQuint = cubic-bezier(0.230, 1.000, 0.320, 1.000)
+
+//
+// Grid settings
+//
+
+$gutter = 10px
+
+//
+// Breakpoints and Media Queries
+//
+
+$lapStart = 650px
+$deskStart = 1024px
+$deskWideStart = 1280px
+$deskSuperWideMq = 1500px
+$palmEnd = $lapStart - 1px
+$lapEnd = $deskStart - 1px
+
+$palmMq = "only screen and (max-width:" + $lapStart + ")"
+$lapMq = "only screen and (min-width:" + $lapStart +") and (max-width:" + $lapEnd + ")"
+$portableMq = "only screen and (max-width:" + $lapEnd + ")"
+$deskMq = "only screen and (min-width:" + $deskStart+ ")"
+$lapAndDeskMq = "only screen and (min-width:" + $lapStart + ")"
+$deskWideMq = "only screen and (min-width:" + $deskWideStart + ")"
+$deskSuperWideMq = "only screen and (min-width:" + $deskSuperWideMq + ")"
+
+//
+// BUTTON STYLE
+//
+
+buttonStyle()
+  color #fff
+  background-color $colorPrimary
+  border none

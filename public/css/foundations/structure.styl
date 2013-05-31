@@ -1,0 +1,72 @@
+//
+// STRUCTURAL STYLES
+// =================
+// Elements which contain all page content – including header, footer, nav etc.
+//
+
+/* PINTEREST FIX */
+
+iframe[src^="//assets.pinterest"] {
+  display: none;
+}
+
+.container
+  padding 0 20px
+  margin 0 auto
+  max-width $maxWidth
+
+.container-unpadded
+  margin 0 auto
+  padding 0
+  max-width $maxWidth
+
+.outer-wrap
+  position relative
+  width 100%
+  overflow hidden
+
+.inner-wrap
+  position relative
+  width 100%
+
+.advert-top
+  @media $lapMq
+    position relative
+    top 55px
+  @media $palmMq
+    display none
+
+// Table Styles for Zoomy widgets
+
+.table
+  display block
+.row
+  @extend .grid
+.cell, .flex
+  @extend .grid__item
+
+table-layout-lap()
+
+  .table
+    display table
+  .row
+    display table-row
+  .cell
+    float none
+    display table-cell
+    vertical-align top
+    height 100%
+
+@media $lapMq
+  table-layout-lap()
+
+@media $deskMq
+  .grid-main .grid__item.desk-two-thirds
+    .table
+      display block
+    .row
+      height 100%
+    .cell
+      height 100%
+  .grid-main .grid__item.desk-one-whole
+    table-layout-lap()

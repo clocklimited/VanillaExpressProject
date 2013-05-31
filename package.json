@@ -1,0 +1,56 @@
+{
+  "name": "SITENAME",
+  "private": true,
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "node ./node_modules/pliers/pliers-cli.js qa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:clocklimited/VanillaExpressProject.git"
+  },
+  "author": "Clock",
+  "license": "New BSD",
+  "dependencies": {
+    "async": "~0.2",
+    "bundled": ">=0.0.5",
+    "browserify": "~2.13.2",
+    "bytes": "~0.2.0",
+    "express": "~3.1",
+    "jade": "~0.28",
+    "lodash": "=1.0.1",
+    "logga": ">=0.0.3",
+    "service-locator": "~0.0",
+    "validity": "0.0.3",
+    "mongodb": "~1.2.14",
+    "stylus": "0.32.0",
+    "moment": "~2.0.0",
+    "pliers": "*",
+    "nib": "~0.9.1",
+    "stylus-renderer": "~0.0",
+    "fastclick": "~0.6.1",
+    "paged": "0.0.4",
+    "clustered": "git://github.com/serby/clustered.git",
+    "regg": "0.0.2",
+    "sigmund": "~1.0.0",
+    "uber-cache": "~0.3.0",
+    "doorman": "0.0.2",
+    "uglify-js": "~2.2.5",
+    "through": "~2.3.1",
+    "versionator": "~0.2.1",
+    "request": "~2.21",
+    "modal": "~0.1.2"
+  },
+  "devDependencies": {
+    "cucumber": "~0.3",
+    "jquery": "~1.8.3",
+    "jsdom": "~0.5.0",
+    "jshint": "~1.0.0",
+    "mocha": "~1.8",
+    "should": ">=1.2.2",
+    "sinon": "~1.6.0",
+    "supertest": "~0.5",
+    "zombie": "~1.4"
+  }
+}

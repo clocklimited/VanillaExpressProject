@@ -1,0 +1,132 @@
+@media print
+
+  // Add a margin all the way around the page
+  @page
+    margin 2cm
+
+  // Print stylesheet is using the mobile styles
+  // Adjust the overall page width
+  .container
+    width auto
+    max-width 560px
+
+  .main-content
+    padding-top 100px
+    margin-top 40px
+    position relative
+
+  // Add logo to header
+  .main-content:before
+    content versionPath('/static/images/print-logo.png')
+    width 345px
+    height 45px
+    display block
+    margin-bottom 40px
+    position absolute
+    top 0
+    left 50%
+    margin-left -170px
+
+  // Hide major sections of the site
+  .advert-top
+  .main-header
+  .main-navigation
+  .grid-main .desk-one-third
+  .breadcrumbs
+  .article-content .item-actions
+  .article-content .footer
+  .widget-comments
+  .btn-view-gallery
+  .author-img
+  .widget-related-articles
+    display none
+
+  // Make the main content fill the available sidebar space
+  .grid-main .desk-two-thirds
+    width 100%
+
+  .scrollUp
+    display none !important
+
+
+  // Hide footer, excluding copyright info
+  .main-footer
+    background-color transparent
+    color #000
+    padding-top 0
+    .grid
+      display none
+    .grid-main
+      display block
+      a
+        font-family $baseFontFamily
+        font-size $baseFontSize
+        line-height $baseLineHeight
+        font-weight 300
+        color $baseFontColor
+        padding 0 !important
+        text-transform none
+        letter-spacing 0px !important
+        margin-right 20px
+
+  .article-header
+    width auto
+    float none
+    margin 0
+    .article-landscape &
+      float none
+      width auto
+      padding 0
+
+  .article-title
+    color #000
+    background-color transparent
+    padding 0
+    margin 0 0 20px 0 !important
+    .article-landscape &
+      width auto
+
+  .article-img-primary
+    float none
+    padding 0
+    margin 0
+    width auto
+    .img-wrapper-shadow
+      margin 0 0 20px 0
+
+  .article-content
+    .img-wrapper-shadow:before
+    .img-wrapper-shadow:after
+      content none
+    img
+      display block
+      width auto
+      height auto
+      max-width 300px
+      max-height 300px
+
+
+  // Ensure that any links within paragraphs offer links readers can visit later.
+  // E.g. link text of 'GitHub' on screen would show 'Github (http://www.github.com)' when printed.
+
+  p
+    a
+      // Ensure long URLs wrap when appended to links so we don't break the layout
+      word-wrap: break-word
+
+      // Force a consistent appearance for links
+      color #000 !important
+      text-decoration underline !important
+
+    a:after
+    a[href^="http://"]:after,
+    a[href^="https://"]:after,
+    a[href^="mailto:"]:after
+      font-size: 80%
+      content " (" attr(href) ")"
+      text-decoration none
+
+    // Don't bother showing content for links that go nowhere
+    a[href^="#"]:after
+    a[href=""]:after
+      display none
