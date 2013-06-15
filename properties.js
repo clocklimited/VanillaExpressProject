@@ -14,10 +14,10 @@ var _ = require('lodash')
         , long: 'dddd DD MMMM YYYY'
         }
       , dateTime:
-        { short: 'HH:MM DD MMM \'YY'
-        , long: 'dddd DD MMMM YYYY, HH:MM'
-        , longTimeZone: 'HH:MM A [on] dddd D MMMM YYYY'
-        , events: 'HH.MM A[,] DD MMM YYYY'
+        { short: 'HH:mm DD MMM \'YY'
+        , long: 'dddd DD MMMM YYYY, HH:mm'
+        , longTimeZone: 'HH:mm A [on] dddd D MMMM YYYY'
+        , events: 'HH.mm A[,] DD MMM YYYY'
         }
       }
     }
