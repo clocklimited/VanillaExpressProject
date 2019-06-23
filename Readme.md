@@ -1,5 +1,7 @@
 # Simple Website Platform
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/VanillaExpressProject.svg)](https://greenkeeper.io/)
+
 ```
 # Check out the repo
 git clone git@github.com:clocklimited/VanillaExpressProject
