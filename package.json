@@ -23,7 +23,7 @@
     "logga": ">=0.0.3",
     "service-locator": "~0.0",
     "validity": "0.0.3",
-    "mongodb": "~1.2.14",
+    "mongodb": "~3.6.1",
     "stylus": "0.32.0",
     "moment": "~2.0.0",
     "pliers": "*",
